@@ -14,7 +14,6 @@ class Cart extends Model
         return $this->hasMany(CartItem::class);
     }
 
-    // Senior Logic: Calculate total items in cart
     public function getTotalQuantityAttribute(): int
     {
         return $this->items()->sum('quantity');
