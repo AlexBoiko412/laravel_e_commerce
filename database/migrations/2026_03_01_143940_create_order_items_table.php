@@ -20,6 +20,8 @@ return new class extends Migration
             $table->decimal('unit_price_at_purchase', 10, 2)->unsigned();
             $table->decimal('tax_at_purchase', 10, 2)->unsigned();
 
+            $table->timestamps();
+
             $table->foreign('order_id')
                 ->references('id')
                 ->on('orders')
