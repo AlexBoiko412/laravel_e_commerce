@@ -14,6 +14,7 @@ use App\Models\ProductVariant;
 use App\Models\User;
 use App\Enums\AddressType;
 use Illuminate\Database\Seeder;
+use App\Enums\UserRole;
 
 class DatabaseSeeder extends Seeder
 {
@@ -22,9 +23,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $admin = User::factory()->create([
+        User::factory()->create([
             'name' => 'Admin User',
             'email' => 'admin@example.com',
+            'role' => UserRole::ADMIN,
         ]);
 
         $customers = User::factory(20)->create();

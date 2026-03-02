@@ -1,4 +1,7 @@
 @import 'tailwindcss';
+@import './UI/button.css';
+@import './UI/navbar.css';
+@import './UI/form.css';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -8,4 +11,49 @@
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+
+:root {
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --success: #16a34a;
+    --bg-gray: #f9fafb;
+    --border-color: #e5e7eb;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --error-text: #ef4444;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--bg-gray);
+    margin: 0;
+    color: var(--text-main);
+}
+
+main {
+    margin: 0 40px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Utilities */
+.hidden { display: none; }
+.text-center { text-align: center; }
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.link {
+    color: var(--primary);
+    text-decoration: underline;
 }
